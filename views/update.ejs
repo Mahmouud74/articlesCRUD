@@ -1,0 +1,12 @@
+<%- include('shared/header.ejs') %>
+<div class="container mt-5 mb-3">
+    <form action="/handleupdate/<%=note._id%>" method="post">
+    <input placeholder="Type Title" value='<%=note.title%>' name="title" class="form-control" type="text">
+    <textarea class="form-control my-2"  placeholder="Type your note" name="desc" id="" cols="30" rows="10"><%=note.desc%></textarea>
+</div>
+<div class="modal-footer">
+    <button type="submit" class="btn btn-info m-auto"><i class="fas fa-edit float-left edit"></i> Update Note</button>
+</div>
+</form>
+
+<%- include('shared/footer.ejs') %>
